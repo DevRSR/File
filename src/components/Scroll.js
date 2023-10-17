@@ -1,33 +1,34 @@
 import { useState } from "react";
-import tab1 from "../illustration-features-tab-1.svg"
-import tab2 from "../illustration-features-tab-2.svg"
-import tab3 from "../illustration-features-tab-3.svg"
+import tab1 from "../images/illustration-features-tab-1.svg"
+import tab2 from "../images/illustration-features-tab-2.svg"
+import tab3 from "../images/illustration-features-tab-3.svg"
 
 const Scroll = () => {
   const [ bookmark, setBook ] = useState(true);
   const [Intel , setIntel] = useState(false);
   const [ search, setSearch] = useState(false);
   
-  const handleTab1 = () => {
-    setSearch(false);
-    setIntel(false);
-    setBook(true);
-  }
-  const handleTab2 = () => {
-    setSearch(true);
-    setIntel(false);
-    setBook(false);
-  }
-  const handleTab3 = () => {
-    setSearch(false);
-    setIntel(true);
-    setBook(false);
-  }
+  
+    const handleTab1 = () => {
+      setSearch(false);
+      setIntel(false);
+      setBook(true);
+    }
+    const handleTab2 = () => {
+      setSearch(true);
+      setIntel(false);
+      setBook(false);
+    }
+    const handleTab3 = () => {
+      setSearch(false);
+      setIntel(true);
+      setBook(false);
+    }
   
   
   return (
    <div className="flex">
-   <div className="feature">
+    <div className="feature">
      <h2>Features</h2>
      <p>Our aim is to make it quick and easy for you to access your favourite websites.Your bookmarks sync between your devices so you can access them on the go.
      </p>
@@ -35,19 +36,19 @@ const Scroll = () => {
     <div className="row">
      <div className="border" onClick={handleTab1}>
        <p>Simple Bookmarking</p>
-        { bookmark && <div></div> }
+         { bookmark && <div className='active'></div> }  
        </div>
       <div className="border" onClick={handleTab2}>
        <p>Speedy Searching</p>
-        { search && <div></div> }
+         { search && <div className='active'></div> } 
        </div>
-      <div className="border" onClick={handleTab3}>
+      <div className="border" onClick={ handleTab3  }>
        <p>Easy Sharing</p>
-        { Intel && <div></div> }
+         { Intel && <div className='active'></div> } 
        </div>
      </div>
      <div className = "show">
-     { bookmark && <div> 
+     { bookmark && <div className='feature_detail'> 
      <div className="image">
       <img src={tab1} />
       </div>
@@ -57,7 +58,7 @@ const Scroll = () => {
          <a href="#">More Info</a>
        </div>
       </div> }
-      { search && <div>
+      { search && <div className = "feature_detail">
       <div className="image">
        <img src={tab2} alt=""/>
       </div>
@@ -67,7 +68,7 @@ const Scroll = () => {
         <a href="#">More Info</a>
        </div>
       </div> }
-      { Intel && <div>
+      { Intel && <div className='feature_detail'>
       <div className="image">
        <img src={tab3}/>
       </div>

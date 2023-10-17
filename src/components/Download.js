@@ -1,6 +1,6 @@
-import chrome from "../logo-chrome.svg"
-import fire from "../logo-firefox.svg"
-import opera from "../logo-opera.svg"
+import chrome from "../images/logo-chrome.svg"
+import fire from "../images/logo-firefox.svg"
+import opera from "../images/logo-opera.svg"
 
 const Download = () => {
   return (

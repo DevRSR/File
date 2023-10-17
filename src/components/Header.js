@@ -1,4 +1,4 @@
-import Pic from '../logo-bookmark.svg';
+import Pic from '../images/logo-bookmark.svg';
 const Header = () => {
   return (
     <div className="header">

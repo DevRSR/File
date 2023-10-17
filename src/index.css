@@ -1,4 +1,4 @@
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +8,10 @@ a {
   text-decoration: none;
   color: #000;
 }
+p, small {
+  font-size: 14px;
+}
+
 .header {
   max-width: 800px;
   display: flex;
@@ -38,6 +42,9 @@ a {
   color: hsl(0, 94%, 66%);
   border: 1px solid  hsl(0, 94%, 66%);
 }
+
+
+/*    intro     */
 
 .intro {
   position: relative;
@@ -116,6 +123,8 @@ a {
   width: 100%;
 }
 
+/* feature  */
+
 .feature {
   max-width: 650px;
   margin: 30px auto;
@@ -166,14 +175,23 @@ a {
   margin: 0 auto;
   color: hsl(229, 8%, 60%);
 }
+
+.border {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
 .border p {
   text-align: center;
-  margin: 15px 0;
+  margin: 10px 0;
 }
-.border div{
+.active {
   width: 100%;
   height: 3px;
   background: hsl(0, 94%, 66%);
+  animation: slide 1.5s ease-in 1s;
+  transition: all ease-in 3s;
 }
 
 .show {
@@ -181,14 +199,16 @@ a {
   max-width: 800px;
 }
 
-.show div {
+.feature_detail{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
+  animation: slide 1.5s ease-in 1s;
+  transition: all 3s ease-in;
 }
 .image {
-
-  margin-right: 30px;
+  flex-basis: 50%;
 }
 .image img {
   width: 100%;
@@ -196,7 +216,7 @@ a {
 .coln {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
+  flex-basis: 40%;
 }
 .coln h2 {
   align-self: flex-start;
@@ -219,6 +239,7 @@ a {
   width: 100px;
 }
 
+/*    download     */
 
 .download {
   max-width: 700px;
@@ -280,49 +301,51 @@ a {
   margin: 10px 0;
   color:hsl(229, 8%, 60%);
 }
+
+/****  freq as Q  ******/
 .faq {
   margin: 40px 0;
 }
 .faq div {
-  max-width: 550px;
+  max-width: 600px;
   text-align: center;
   margin: 40px auto;
 }
-.faq div h3{
-  margin: 15px 0;
+.faq div h5{
+  margin: 15px 0 25px;
 }
-.faq div p {
+.parag {
+  font-size: 7px;
   color: #000;
   text-align: center;
 }
-.faq div a{
+.moreInfo a{
   border-radius: 4px;
   padding: 8px;
   color: #fafafa;
   background: hsl(231, 69%, 60%);
   margin: 0 auto;
 }
-.list {
-  max-width: 400px;
-  margin: 30px auto;
-}
 .head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+.head .div {
+  justify-self: flex-start;
+}
+.div p {
 }
 .article {
-  display: flex;
-  margin: 20px 0;
-}
-.hid {
   display: none;
-}
-.article p {
   font-size: 14px;
-  color: #101011;
-  text-align: left;
 }
+.up {
+  display: block;
+}
+
 .uptodate {
   margin-top: 100px;
   background: hsl(231, 69%, 60%);
@@ -337,7 +360,7 @@ a {
   text-align: center;
   color: #fafafa;
 }
-.uptodate div h2 {
+.uptodate div h4 {
   text-align: center;
   color: #fafafa;
 }
@@ -365,6 +388,7 @@ a {
   background: hsl(0, 94%, 66%);
 }
 
+/*  footer  */
 
 footer {
   background: hsl(229, 31%, 21%);
@@ -397,4 +421,17 @@ div nav a {
 }
 .social img:hover{
   filter: opacity(.3) drop-shadow(0 0 0 hsl(0, 94%, 66%));
+}
+
+@media(max-width:500px) {
+  
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

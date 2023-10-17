@@ -1,4 +1,4 @@
-import img from "../illustration-hero.svg"
+import img from "../images/illustration-hero.svg"
 
 const Intro = () => {
   return (

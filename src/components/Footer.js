@@ -1,6 +1,6 @@
-import pix from "../logo-bookmark.svg";
-import facebook from "../icon-facebook.svg";
-import twitter from "../icon-twitter.svg";
+import pix from "../images/logo-bookmark.svg";
+import facebook from "../images/icon-facebook.svg";
+import twitter from "../images/icon-twitter.svg";
 const Footer = () => {
   return (
    <footer>
